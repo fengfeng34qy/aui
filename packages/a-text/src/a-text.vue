@@ -8,6 +8,7 @@
 <script>
 export default {
   name: 'a-text',
+  author: 'sunfengfeng',
   data() {
     return {}
   },
