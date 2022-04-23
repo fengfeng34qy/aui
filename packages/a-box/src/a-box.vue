@@ -6,6 +6,7 @@
 <script>
 export default {
   name: 'a-box',
+  author: 'sunfengfeng',
   data() {
     return {
       direction: '',
