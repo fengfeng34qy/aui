@@ -6,7 +6,6 @@
 </template>
 <script>
 export default {
-  author: 'sunfengfeng',
   name: 'aui-box'
 }
 </script>
