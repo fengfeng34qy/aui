@@ -3,10 +3,6 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-
-// import sffButton from '../lib/sff-vue-commponents'
-// console.log(sffButton)
-
 // 引入打包后的组件库
 import Aui from 'aui'
 
