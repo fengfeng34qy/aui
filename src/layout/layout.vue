@@ -12,6 +12,7 @@
         <div class="alink-box"><a class="content-alink" href="#" @click="getPage('quickstart')">快速上手</a></div>
         <div class="alink-box"><a class="content-alink" href="#" @click="getPage('a-box')">a-box</a></div>
         <div class="alink-box"><a class="content-alink" href="#" @click="getPage('a-text')">a-text</a></div>
+        <div class="alink-box"><a class="content-alink" href="#" @click="getPage('a-row')">layout布局</a></div>
       </div>
       <div class="content-right">
         <transition name='page' mode="out-in" @after-enter='onNavigated'>

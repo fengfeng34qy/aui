@@ -1,5 +1,7 @@
 {
   "index": "./packages/index.js",
   "a-box": "./packages/a-box/index.js",
-  "a-text": "./packages/a-text/index.js"
+  "a-text": "./packages/a-text/index.js",
+  "a-row": "./packages/a-row/index.js",
+  "a-col": "./packages/a-col/index.js"
 }

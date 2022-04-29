@@ -4,10 +4,9 @@ const NODE_ENV = process.env.NODE_ENV
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var commponents = require('../components.json')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  // entry: './src/index.js',
-  // entry: './packages/index.js',
   entry: commponents,
   output: {
     path: path.resolve(__dirname, '../lib'),
@@ -22,10 +21,11 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ],
+        // use: [
+        //   'vue-style-loader',
+        //   'css-loader'
+        // ],
+        use: ExtractTextPlugin.extract({ fallback: "vue-style-loader", use: "css-loader" })
       },
       {
         test: /\.scss$/,
@@ -57,7 +57,8 @@ module.exports = {
               'vue-style-loader',
               'css-loader',
               'sass-loader?indentedSyntax'
-            ]
+            ],
+            'css': ExtractTextPlugin.extract({ fallback: 'vue-style-loader', use: 'css-loader' })
           }
         }
       },
@@ -93,7 +94,7 @@ module.exports = {
   devtool: '#source-map'
 }
 
-if (process.env.NODE_ENV === 'production') {
+// if (process.env.NODE_ENV === 'production') {
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
@@ -118,13 +119,18 @@ if (process.env.NODE_ENV === 'production') {
       filename: '../lib/[name]/[name].css',
       allChunks: true,
     }),
-    new OptimizeCSSPlugin({
-      cssProcessorOptions: config.build.productionSourceMap
-        ? { safe: true, map: { inline: false } }
-        : { safe: true }
-    }),
+    // new MiniCssExtractPlugin({
+    //   // 对输出的css文件进行重命名
+    //   filename: '../lib/[name]/[name].css',
+    //   allChunks: true,
+    // }),
+    // new OptimizeCSSPlugin({
+    //   cssProcessorOptions: config.build.productionSourceMap
+    //     ? { safe: true, map: { inline: false } }
+    //     : { safe: true }
+    // }),
   ])
   
-}else {
-  module.exports.devtool = '#eval-source-map'
-}
+// }else {
+//   module.exports.devtool = '#eval-source-map'
+// }
