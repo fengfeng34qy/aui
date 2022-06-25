@@ -18,6 +18,7 @@ html, body {
 }
 #app {
   height: 100%;
+  display: flex;
 }
 
 @media screen and (min-width: 768px) {

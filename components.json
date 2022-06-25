@@ -3,5 +3,8 @@
   "a-box": "./packages/a-box/index.js",
   "a-text": "./packages/a-text/index.js",
   "a-row": "./packages/a-row/index.js",
-  "a-col": "./packages/a-col/index.js"
+  "a-col": "./packages/a-col/index.js",
+  "a-button": "./packages/a-button/index.js",
+  "a-icon": "./packages/a-icon/index.js",
+  "Dialog": "./packages/Dialog/index.js"
 }

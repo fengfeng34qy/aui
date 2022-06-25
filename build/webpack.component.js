@@ -5,7 +5,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var commponents = require('../components.json')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const merge = require('webpack-merge')
+const baseWebpackConfig = require('./webpack.base.conf')
+const utils = require('./utils')
 
+// module.exports = merge(baseWebpackConfig, {
 module.exports = {
   entry: commponents,
   output: {
@@ -73,12 +77,29 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('media/[name].[hash:7].[ext]')
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+        }
       }
     ]
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      'aui': path.resolve(__dirname, '../lib/index')
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
@@ -93,6 +114,7 @@ module.exports = {
   // devtool: '#eval-source-map'
   devtool: '#source-map'
 }
+// )
 
 // if (process.env.NODE_ENV === 'production') {
   module.exports.plugins = (module.exports.plugins || []).concat([

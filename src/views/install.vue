@@ -7,8 +7,13 @@
   </div>
 </template>
 <script>
+import aMd from './a.md'
+
 export default {
-  name: 'install'
+  name: '',
+  created() {
+    console.log(aMd)
+  }
 }
 </script>
 <style scoped>

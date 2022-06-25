@@ -1,0 +1,30 @@
+
+.a-text-demo {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.a-row-demo {
+  height: 36px;
+  background: #4182c5;
+  border-radius: 4px;
+  margin: 4px;
+  box-sizing: border-box;
+}
+
+.a-box-demo {
+  width: 100%;
+  margin: .5rem 0;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.a-box-demo-item {
+  background: #41b3a3;
+  padding: .5rem 1rem;
+  margin: 0 .2rem;
+  border-radius: 4px;
+  color: #fff;
+}

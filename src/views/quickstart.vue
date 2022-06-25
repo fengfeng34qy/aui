@@ -9,7 +9,7 @@
 
         import Aui from 'aui';
 
-        import 'aui/lib/index/index.css'
+        import 'aui/index.css'
 
         import App from './App.vue';
 

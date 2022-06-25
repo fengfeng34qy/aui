@@ -1,5 +1,5 @@
 <template>
-  <div class="a-box" :style="{'flex-direction': direction, 'justify-content': justifyContent}">
+  <div class="a-box" :style="{ 'flex-direction': direction, 'justify-content': justifyContent, 'align-items': alignItems, 'order': order}">
     <slot></slot>
   </div>
 </template>
@@ -14,20 +14,24 @@ export default {
     }
   },
   props: {
-    // direction: {
-    //   type: String,
-    //   default: 'row'
-    // },
-    // justifyContent: {
-    //   type: String,
-    //   default: 'center'
-    // }
+    direction: {
+      type: String,
+      default: "row"
+    },
+    justifyContent: {
+      type: String,
+      default: "center"
+    },
+    alignItems: {
+      type: String,
+      default: "center"
+    },
+    order: {
+      type: String,
+      default: "0"
+    }
   },
-  created() {
-    // console.log(this.justifyContent)
-    this.direction = this.$attrs["direction"] || 'row';
-    this.justifyContent = this.$attrs["justify-content"] || 'center';
-  },
+  created() {},
   mounted() {}
 }
 </script>

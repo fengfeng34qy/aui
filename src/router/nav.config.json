@@ -1,0 +1,51 @@
+{
+  "zh-CN": [
+    {
+      "name": "开发指南",
+      "children": [
+        {
+          "path": "/installation",
+          "name": "安装"
+        },
+        {
+          "path": "/quickstart",
+          "name": "快速上手"
+        }
+      ]
+    },
+    {
+      "name": "组件",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": [
+            {
+              "path": "/layout",
+              "title": "Layout 布局"
+            },
+            {
+              "path": "/a-box",
+              "title": "Box 弹性布局"
+            },
+            {
+              "path": "/a-text",
+              "title": "Text 文本对齐"
+            },
+            {
+              "path": "/button",
+              "title": "Button 按钮"
+            },
+            {
+              "path": "/icon",
+              "title": "icon 图标"
+            },
+            {
+              "path": "/a-dialog",
+              "title": "Dialog 弹窗"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
