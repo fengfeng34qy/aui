@@ -2,7 +2,7 @@
 
 > 简单组件打包项目
 
-[效果预览](http://aui.sunfengfeng.com)
+[效果预览](http://aui.sunfengfeng.com) 
 
 ## 步骤
 
